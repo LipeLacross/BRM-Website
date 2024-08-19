@@ -1,0 +1,63 @@
+@import './variables';
+@import './mixins';
+@import './base';
+
+.App {
+  text-align: center;
+
+  .App-header {
+    background-color: $primary-color;
+    padding: 20px;
+    color: white;
+  }
+
+  main {
+    padding: 20px;
+  }
+
+  form {
+    margin: 20px auto;
+    max-width: 600px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: $border-radius;
+    background-color: white;
+
+    div {
+      margin-bottom: 10px;
+
+      label {
+        display: block;
+        margin-bottom: 5px;
+      }
+
+      input,
+      select {
+        width: 100%;
+        padding: 8px;
+        box-sizing: border-box;
+      }
+    }
+
+    button {
+      @include button-style($primary-color);
+    }
+  }
+
+  .results {
+    margin-top: 20px;
+
+    p {
+      margin: 10px 0;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+
+      li {
+        margin: 5px 0;
+      }
+    }
+  }
+}
