@@ -1,63 +1,52 @@
-@import './variables';
-@import './mixins';
-@import './base';
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
 
-.App {
-  text-align: center;
+main {
+  padding: 20px;
+}
 
-  .App-header {
-    background-color: $primary-color;
-    padding: 20px;
-    color: white;
-  }
+h1, h2 {
+  color: #4caf50;
+}
 
-  main {
-    padding: 20px;
-  }
+form {
+  margin: 20px 0;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
 
-  form {
-    margin: 20px auto;
-    max-width: 600px;
-    padding: 20px;
-    border: 1px solid #ddd;
-    border-radius: $border-radius;
-    background-color: white;
+form div {
+  margin-bottom: 15px;
+}
 
-    div {
-      margin-bottom: 10px;
+form label {
+  display: block;
+  margin-bottom: 5px;
+}
 
-      label {
-        display: block;
-        margin-bottom: 5px;
-      }
+form input, form select {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
 
-      input,
-      select {
-        width: 100%;
-        padding: 8px;
-        box-sizing: border-box;
-      }
-    }
+form button {
+  background-color: #4caf50;
+  color: #fff;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
 
-    button {
-      @include button-style($primary-color);
-    }
-  }
-
-  .results {
-    margin-top: 20px;
-
-    p {
-      margin: 10px 0;
-    }
-
-    ul {
-      list-style: none;
-      padding: 0;
-
-      li {
-        margin: 5px 0;
-      }
-    }
-  }
+form button:hover {
+  background-color: #45a049;
 }
