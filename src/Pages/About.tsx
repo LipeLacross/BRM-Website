@@ -1,11 +1,15 @@
 import React from 'react';
+import '../styles/About.sass';
 
 const About: React.FC = () => {
     return (
-        <div className="about">
-            <h2>Sobre o SuaTmb</h2>
+        <div className="about-page">
+            <h1>Sobre</h1>
             <p>
-                O SuaTmb é uma ferramenta desenvolvida para ajudar você a entender melhor seu metabolismo e planejar suas metas alimentares de forma eficiente. Usamos a Fórmula de Mifflin-St Jeor para garantir precisão no cálculo da TMB.
+                Bem-vindo ao SuaTmb, uma plataforma projetada para ajudar você a calcular sua taxa de metabolismo basal e planejar suas dietas de acordo com suas necessidades.
+            </p>
+            <p>
+                O SuaTmb utiliza fórmulas precisas e atualizadas para garantir que você tenha as informações necessárias para atingir seus objetivos de saúde e fitness.
             </p>
         </div>
     );

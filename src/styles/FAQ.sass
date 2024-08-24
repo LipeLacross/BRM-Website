@@ -1,0 +1,49 @@
+@import './mixins'
+
+.faq-page
+  padding: 20px
+  max-width: 800px
+  margin: 0 auto
+  background-color: #ffffff
+  border-radius: 8px
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1)
+  @include fade-in
+
+  h1
+    font-size: 2rem
+    margin-bottom: 1rem
+    color: #333
+    @include bounce
+
+  h2
+    font-size: 1.5rem
+    margin-top: 1.5rem
+    margin-bottom: 1rem
+    color: #555
+
+  p
+    margin-bottom: 1rem
+    line-height: 1.6
+
+  ul
+    list-style: none
+    padding: 0
+    margin-bottom: 2rem
+
+    li
+      margin-bottom: 0.5rem
+      padding: 0.5rem
+      border: 1px solid #ccc
+      border-radius: 4px
+      background-color: #f9f9f9
+
+      &:hover
+        background-color: #e9e9e9
+
+      h3
+        font-size: 1.2rem
+        margin-bottom: 0.5rem
+        color: #333
+
+      p
+        margin-bottom: 0

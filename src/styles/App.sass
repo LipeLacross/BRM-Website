@@ -1,0 +1,20 @@
+@import './variables'
+@import './mixins'
+@import './Header'
+@import './Footer'
+@import './Form'
+@import './Results'
+
+body
+  font-family: $font-family
+  color: $font-color
+  margin: 0
+  background-color: $background-color
+  padding-top: 60px
+  transition: background-color 0.3s ease
+
+.container
+  max-width: 1200px
+  margin: 0 auto
+  padding: 20px
+  @include fade-in

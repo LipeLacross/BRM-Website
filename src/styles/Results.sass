@@ -1,0 +1,71 @@
+@import './mixins'
+
+.results
+  padding: 2rem
+  max-width: 600px
+  margin: auto
+  border: 1px solid #ddd
+  border-radius: 8px
+  background-color: #ffffff
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1)
+  line-height: 1.6
+  @include fade-in
+  transition: box-shadow 0.3s ease
+
+  &:hover
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15)
+
+  h2
+    font-size: 1.75rem
+    margin-bottom: 1.5rem
+    color: #333
+    @include fade-in
+
+  .result-section
+    margin-bottom: 2rem
+    padding: 1rem
+    border: 1px solid #ddd
+    border-radius: 8px
+    background-color: #f9f9f9
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1)
+    @include fade-in
+
+    h3
+      font-size: 1.5rem
+      margin-bottom: 1rem
+      color: #555
+      @include fade-in
+
+    p
+      font-size: 1rem
+      margin: 0.5rem 0
+      color: #333
+      @include fade-in
+
+  .bulk, .cutting
+    margin-top: 2rem
+    padding: 1rem
+    border-radius: 8px
+    background-color: #f9f9f9
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1)
+    @include fade-in
+
+    h3
+      font-size: 1.5rem
+      margin-bottom: 1rem
+      color: #333
+      @include fade-in
+
+    p
+      font-size: 1rem
+      margin: 0.5rem 0
+      color: #333
+      @include fade-in
+
+  .bulk
+    border: 1px solid #007bff
+    background-color: #e7f0ff
+
+  .cutting
+    border: 1px solid #dc3545
+    background-color: #f8d7da
