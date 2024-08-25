@@ -19,6 +19,7 @@ const Form: React.FC<FormProps> = ({ onCalculate }) => {
     const [weight, setWeight] = useState<number | ''>('');
     const [height, setHeight] = useState<number | ''>('');
     const [activity, setActivity] = useState<ActivityLevel>('sedentary');
+    const [error, setError] = useState<string>('');
 
     const handleSubmit = (e: React.FormEvent) => {
         e.preventDefault();
@@ -26,13 +27,14 @@ const Form: React.FC<FormProps> = ({ onCalculate }) => {
             age === '' ||
             weight === '' ||
             height === '' ||
-            !Number.isFinite(age) ||
-            !Number.isFinite(weight) ||
-            !Number.isFinite(height)
+            !Number.isFinite(age) || age <= 0 ||
+            !Number.isFinite(weight) || weight <= 0 ||
+            !Number.isFinite(height) || height <= 0
         ) {
-            alert("Por favor, preencha todos os campos obrigatórios corretamente.");
+            setError("Por favor, preencha todos os campos obrigatórios corretamente com valores maiores que 0.");
             return;
         }
+        setError('');
         onCalculate({
             gender,
             age: Number(age),
@@ -41,6 +43,8 @@ const Form: React.FC<FormProps> = ({ onCalculate }) => {
             activity
         });
     };
+
+    const isFormValid = age !== '' && weight !== '' && height !== '' && Number(age) > 0 && Number(weight) > 0 && Number(height) > 0;
 
     return (
         <div className="form-container">
@@ -58,7 +62,8 @@ const Form: React.FC<FormProps> = ({ onCalculate }) => {
                     <input
                         type="number"
                         value={age}
-                        onChange={(e) => setAge(Number(e.target.value))}
+                        onChange={(e) => setAge(e.target.value === '' ? '' : Number(e.target.value))}
+                        step="0.1"
                         required
                     />
                 </label>
@@ -67,7 +72,8 @@ const Form: React.FC<FormProps> = ({ onCalculate }) => {
                     <input
                         type="number"
                         value={weight}
-                        onChange={(e) => setWeight(Number(e.target.value))}
+                        onChange={(e) => setWeight(e.target.value === '' ? '' : Number(e.target.value))}
+                        step="0.1"
                         required
                     />
                 </label>
@@ -76,7 +82,8 @@ const Form: React.FC<FormProps> = ({ onCalculate }) => {
                     <input
                         type="number"
                         value={height}
-                        onChange={(e) => setHeight(Number(e.target.value))}
+                        onChange={(e) => setHeight(e.target.value === '' ? '' : Number(e.target.value))}
+                        step="0.1"
                         required
                     />
                 </label>
@@ -90,7 +97,8 @@ const Form: React.FC<FormProps> = ({ onCalculate }) => {
                         <option value="extreme">Extremamente Ativo - Exercício muito pesado e treino de 2x ao dia</option>
                     </select>
                 </label>
-                <button type="submit">Calcular</button>
+                {error && <div className="error-message">{error}</div>}
+                <button type="submit" disabled={!isFormValid}>Calcular</button>
             </form>
         </div>
     );

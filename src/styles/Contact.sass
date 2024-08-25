@@ -44,7 +44,7 @@
       margin-bottom: 0.5rem
 
     input, textarea
-      width: 50%
+      width: 90%
       padding: 0.75rem
       border: 1px solid #ccc
       border-radius: 4px
@@ -61,3 +61,10 @@
     &:hover
       background-color: #0056b3
       transform: scale(1.05)
+
+  @media (max-width: 768px)
+    .form-group
+      label
+        font-size: 0.9rem
+      input, textarea
+        width: 80%
