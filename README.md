@@ -11,7 +11,7 @@ O **SuaTmb** é um projeto de site para calcular a Taxa de Metabolismo Basal (TM
 
 ### Exemplo Visual do Projeto
 
-![Exemplo Visual do Projeto](https://suatmb.netlify.app/screenshot.png)
+![image](https://github.com/user-attachments/assets/59017e54-7088-4cf7-8fd3-37ed89d62f34)
 
 ## ✔️ Técnicas e Tecnologias Utilizadas
 
