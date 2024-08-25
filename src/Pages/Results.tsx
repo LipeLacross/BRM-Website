@@ -10,7 +10,6 @@ const formatNumber = (num: number) => num.toFixed(2);
 const Results: React.FC<ResultsProps> = ({ results }) => {
     if (!results) return null;
 
-    const maintenanceMacros = results.maintenanceMacros || {};
     const bulkMacros = results.bulkMacros || {};
     const cuttingMacros = results.cuttingMacros || {};
 
