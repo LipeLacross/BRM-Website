@@ -24,22 +24,53 @@ O **SuaTmb** é um projeto de site para calcular a Taxa de Metabolismo Basal (TM
 - **public/**
     - `favicon.svg`: Ícone do site.
     - `index.html`: Arquivo HTML principal.
-    - `logo192.png`: Logo do site para dispositivos de resolução média.
-    - `logo512.png`: Logo do site para dispositivos de alta resolução.
     - `manifest.json`: Arquivo de manifesto para Progressive Web App (PWA).
     - `robots.txt`: Arquivo para controle de indexação pelos motores de busca.
 
 - **src/**
+    - `App.css`: Estilos globais da aplicação.
+    - `App.test.tsx`: Testes para o componente `App`.
     - `App.tsx`: Componente principal da aplicação.
-    - `components/`: Componentes reutilizáveis como `Footer.tsx` e `Header.tsx`.
-    - `Pages/`: Páginas do site, como `Home.tsx`, `About.tsx`, `Contact.tsx`, etc.
-    - `styles/`: Arquivos SASS para estilização, incluindo `App.sass`, `Footer.sass`, etc.
+    - `components/`: Componentes reutilizáveis
+        - `Footer.tsx`: Componente de rodapé.
+        - `Header.tsx`: Componente de cabeçalho.
+    - `index.css`: Estilos globais de entrada.
     - `index.tsx`: Ponto de entrada da aplicação.
+    - `logo.svg`: Logo do site.
+    - `Pages/`: Páginas do site
+        - `About.tsx`: Página sobre o projeto.
+        - `Contact.tsx`: Página de contato.
+        - `FAQ.tsx`: Perguntas frequentes.
+        - `Form.tsx`: Formulário para cálculo de TMB.
+        - `Home.tsx`: Página inicial.
+        - `Privacy.tsx`: Política de privacidade.
+        - `Results.tsx`: Página de resultados do cálculo.
+        - `Terms.tsx`: Termos e condições.
+    - `react-app-env.d.ts`: Definições de ambiente para o React.
+    - `reportWebVitals.ts`: Relatórios de métricas de performance.
+    - `scripts/`: Scripts auxiliares.
+    - `setupTests.ts`: Configurações para testes.
+    - `styles/`: Arquivos SASS para estilização
+        - `About.sass`: Estilos para a página sobre.
+        - `App.sass`: Estilos principais da aplicação.
+        - `Contact.sass`: Estilos para a página de contato.
+        - `FAQ.sass`: Estilos para a página de FAQ.
+        - `Footer.sass`: Estilos para o rodapé.
+        - `Form.sass`: Estilos para o formulário.
+        - `Header.sass`: Estilos para o cabeçalho.
+        - `Privacy.sass`: Estilos para a página de privacidade.
+        - `Results.sass`: Estilos para a página de resultados.
+        - `Terms.sass`: Estilos para a página de termos.
+        - `_mixins.sass`: Mixins SASS reutilizáveis.
+        - `_variables.sass`: Variáveis SASS para temas e estilos.
 
 - **.gitignore**: Arquivo que define quais arquivos e diretórios devem ser ignorados pelo Git.
+- **directory_listing.txt**: Lista de diretórios e arquivos do projeto.
+- **LICENSE**: Arquivo de licença do projeto.
+- **package-lock.json**: Gerenciador de pacotes e suas versões.
 - **package.json**: Arquivo que gerencia dependências e scripts do projeto.
-- **tsconfig.json**: Configurações do TypeScript.
 - **README.md**: Documentação do projeto.
+- **tsconfig.json**: Configurações do TypeScript.
 
 ## 🛠️ Abrir e Rodar o Projeto
 
