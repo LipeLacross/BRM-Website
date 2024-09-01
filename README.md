@@ -1,3 +1,5 @@
+## 🌐 [English Version of README](README_EN.md)
+
 # SuaTmb
 
 O **SuaTmb** é um projeto de site para calcular a Taxa de Metabolismo Basal (TMB) e ajudar no planejamento de dietas. O site permite aos usuários inserir dados pessoais e informações sobre seu nível de atividade física para calcular suas necessidades calóricas diárias e recomendações nutricionais.
